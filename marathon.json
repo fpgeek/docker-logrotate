@@ -1,0 +1,19 @@
+{
+  "id": "docker-logrotate",
+  "cpus": 0.1,
+  "mem": 64.0,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "fpgeek/logrotate:latest",
+      "network": "BRIDGE"
+    },
+    "volumes": [
+      {
+        "containerPath": "/var/lib/docker/containers",
+        "hostPath": "/var/lib/docker/containers",
+        "mode": "RW"
+      }
+    ]
+  }
+}
