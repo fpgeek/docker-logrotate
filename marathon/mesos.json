@@ -1,0 +1,19 @@
+{
+  "id": "docker-logrotate",
+  "cpus": 0.1,
+  "mem": 32.0,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "fpgeek/logrotate:mesos",
+      "network": "BRIDGE"
+    },
+    "volumes": [
+      {
+        "containerPath": "/tmp/mesos",
+        "hostPath": "/tmp/mesos",
+        "mode": "RW"
+      }
+    ]
+  }
+}
